@@ -139,3 +139,23 @@ export default MyApp;
 ## /public
 
 For assets
+
+## /pages/api
+
+Into this folder, will be files about "backend" <br />
+Example file [...nextauth].ts (With this file name, we can get route params /api/any/any/etc.)
+
+```javascript
+import NextAuth from "next-auth";
+import Providers from "next-auth/providers";
+
+export default NextAuth({
+  providers: [
+    Providers.GitHub({
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      scope: "read:user",
+    }),
+  ],
+});
+```
