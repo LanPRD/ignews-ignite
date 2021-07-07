@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 ```
 
-### getStaticProps and getServerSideProps
+### getStaticProps (SSG) and getServerSideProps (SSR)
 
 This function returned the PROPS to main function.
 <br />
